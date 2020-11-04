@@ -1,0 +1,24 @@
+import 'dart:io';
+
+main(List<String> arguments) {
+//  for (int counter = 0; counter < 5; counter = counter + 1) {
+//    print('halo ke ' + counter.toString());
+//  }
+
+int i = 5;
+
+  while(i > 0){
+    print('halo ke ' + i.toString());
+    i --;
+  }
+
+print('********************');
+
+int x = 0;
+  do{
+    print('dududu ke ' + x.toString());
+    x += 1;
+  }
+    while (x < 5);
+
+}
