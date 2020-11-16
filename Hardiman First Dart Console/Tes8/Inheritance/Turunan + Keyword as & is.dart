@@ -1,26 +1,28 @@
-import 'dart:io';
-
-import 'hero.dart';
+// import 'hero.dart';
 import 'monster.dart';
-
 import 'monster_kecoa.dart';
 import 'monster_ubur_ubur.dart';
+import '../../Tes9/monster_ucoa.dart';
+import '../../Tes10/flying_monster.dart';
 
 main(List<String> arguments) async {
-  Hero h = Hero();
-  Monster m = Monster();
-  MonsterUburUbur u = MonsterUburUbur();
+  // Hero h = Hero();
+  // Monster m = Monster();
+  // MonsterUburUbur u = MonsterUburUbur();
   List<Monster> monsters = [];
 
   monsters.add(MonsterUburUbur());
   monsters.add(MonsterKecoa());
-  monsters.add(MonsterUburUbur());
+  monsters.add(MonsterUcoa());
 
   for (Monster m in monsters) {
-    if (m is MonsterUburUbur) {
+    if(m is FlyingMonster)
+      print((m as FlyingMonster).fly());
+    // print(m.eatHuman());
+    // if (m is MonsterUburUbur) {
       // print(m.eatHuman());
-      print(m.swim());
-    }
+      // print(m.swim());
+    // }
   }
 
   // MonsterUburUbur u = MonsterUburUbur();
